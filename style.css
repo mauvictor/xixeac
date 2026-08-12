@@ -791,76 +791,87 @@ body.dark .numero {
 
 .links {
 
-    display:
-        flex;
+    display: flex;
 
-    gap:
-        7px;
+    gap: 7px;
 
-    flex-shrink:
-        0;
+    flex-shrink: 0;
 
 }
 
 
 .links a {
 
-    text-decoration:
-        none;
+    text-decoration: none;
 
-    padding:
-        8px 11px;
+    padding: 8px 11px;
 
-    border-radius:
-        8px;
+    border-radius: 8px;
 
-    font-size:
-        12px;
+    font-size: 12px;
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    transition:
-        .2s;
+    transition: .2s;
 
-    white-space:
-        nowrap;
+    white-space: nowrap;
 
 }
 
+
+/* BOTÃO LETRA */
 
 .letra {
 
-    color:
-        var(--azul);
+    color: var(--azul);
 
-    background:
-        var(--azul-muito-claro);
+    background: var(--azul-muito-claro);
 
 }
 
+
+/* BOTÃO CIFRA */
 
 .cifra {
 
-    color:
-        white;
+    color: white;
 
-    background:
-        var(--azul);
+    background: var(--azul);
 
 }
 
+
+/* ======================================================
+   CORREÇÃO PARA O MODO ESCURO
+====================================================== */
+
+body.dark .letra {
+
+    color: #DCEAF3;
+
+    background: var(--azul-muito-claro);
+
+}
+
+
+body.dark .cifra {
+
+    color: #FFFFFF;
+
+    background: var(--azul);
+
+}
+
+
+/* Efeito ao passar o mouse */
 
 .links a:hover {
 
-    transform:
-        translateY(-1px);
+    transform: translateY(-1px);
 
-    opacity:
-        .85;
+    opacity: .85;
 
 }
-
 
 /* ======================================================
    SEM RESULTADO
