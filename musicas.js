@@ -31,39 +31,39 @@ const musicas = [
         musicas: [
 
             {
-                nome: "Coração Adorador",
-                letra: "#",
+                nome: "Coração Adorador - Banda Dom",
+                letra: "https://www.letras.mus.br/banda-dom/205471/",
                 cifra: "https://www.cifraclub.com.br/banda-dom/coracao-adorador/"
             },
 
             {
-                nome: "Derrama o Teu Amor Aqui",
-                letra: "https://celina-borges.musicas.mus.br/letras/525652/",
+                nome: "Derrama o Teu Amor Aqui - Celina Borges",
+                letra: "https://www.letras.mus.br/celina-borges/525652/",
                 cifra: "https://www.cifraclub.com.br/celina-borges/derrama-teu-amor-aqui/"
             },
 
             {
-                nome: "O Céu Se Abre",
-                letra: "#",
+                nome: "O Céu Se Abre - Walmir Alencar",
+                letra: "https://www.letras.mus.br/walmir-alencar/1100285/",
                 cifra: "https://www.cifraclub.com.br/ministerio-adoracao-vida/o-ceu-se-abre/"
             },
 
             {
-                nome: "Onde o Espírito de Deus Está",
-                letra: "#",
+                nome: "Onde o Espírito de Deus Está - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/onde-o-espirito-de-deus-esta/",
                 cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/onde-o-espirito-de-deus-esta/"
             },
 
             {
-                nome: "Refrigera Minh'alma",
-                letra: "#",
+                nome: "Refrigera Minh'alma - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/refrigera-minhalma/",
                 cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/refrigera-minhalma/"
             },
 
             {
-                nome: "Sopra em Nós",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/padre-marcelo-rossi/sopra-em-nos/"
+                nome: "Sopra em Nós - Irmã Ana Paula CMES",
+                letra: "https://www.letras.mus.br/irma-ana-paula-cmes/sopra-em-nos/",
+                cifra: "https://www.cifraclub.com.br/irma-ana-paula-cmes/sopra-em-nos/"
             }
 
         ]
