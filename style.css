@@ -1,0 +1,1100 @@
+/* ======================================================
+   VARIÁVEIS
+====================================================== */
+
+:root {
+
+    --azul: #143A5E;
+    --azul-claro: #1F567D;
+
+    --dourado: #C89B3C;
+    --dourado-claro: #E8D19B;
+
+    --fundo: #F8F5EF;
+    --fundo-card: #FFFFFF;
+
+    --texto: #2B2B2B;
+    --texto-suave: #6B6B6B;
+
+    --borda: #E6E1D8;
+
+    --azul-muito-claro: #EEF4F8;
+
+    --sombra:
+        0 4px 16px rgba(0, 0, 0, .07);
+
+    --sombra-hover:
+        0 8px 24px rgba(0, 0, 0, .12);
+
+    --raio: 14px;
+
+}
+
+
+/* ======================================================
+   MODO ESCURO
+====================================================== */
+
+body.dark {
+
+    --fundo: #12171C;
+
+    --fundo-card: #1B2229;
+
+    --texto: #EEEEEE;
+
+    --texto-suave: #AEB6BD;
+
+    --borda: #303942;
+
+    --azul-muito-claro: #243746;
+
+    --sombra:
+        0 4px 16px rgba(0, 0, 0, .25);
+
+    --sombra-hover:
+        0 8px 24px rgba(0, 0, 0, .35);
+
+}
+
+
+/* ======================================================
+   RESET
+====================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    background:
+        var(--fundo);
+
+    color:
+        var(--texto);
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* ======================================================
+   CABEÇALHO
+====================================================== */
+
+header {
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(200,155,60,.22),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-claro)
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding:
+        45px
+        20px
+        50px;
+
+    overflow: hidden;
+
+}
+
+
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.035);
+
+    top: -160px;
+    left: -80px;
+
+}
+
+
+/* ======================================================
+   ABELHA
+====================================================== */
+
+.abelha {
+
+    position: relative;
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+    filter:
+        drop-shadow(
+            0 6px 10px rgba(0,0,0,.25)
+        );
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.abelha:hover {
+
+    transform:
+        scale(1.06)
+        rotate(-2deg);
+
+}
+
+
+/* ======================================================
+   TÍTULO
+====================================================== */
+
+header h1 {
+
+    position: relative;
+
+    font-family:
+        "Merriweather",
+        serif;
+
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            2.6rem
+        );
+
+    margin: 0;
+
+    letter-spacing:
+        -.5px;
+
+}
+
+
+header p {
+
+    position: relative;
+
+    margin:
+        10px 0 0;
+
+    font-size:
+        1rem;
+
+    opacity:
+        .88;
+
+}
+
+
+.linha-dourada {
+
+    width: 65px;
+
+    height: 3px;
+
+    background:
+        var(--dourado);
+
+    margin:
+        18px auto 0;
+
+    border-radius:
+        10px;
+
+}
+
+
+/* ======================================================
+   CONTAINER
+====================================================== */
+
+.container {
+
+    width:
+        min(
+            1100px,
+            100%
+        );
+
+    margin:
+        auto;
+
+    padding:
+        30px
+        20px
+        70px;
+
+}
+
+
+/* ======================================================
+   BARRA SUPERIOR
+====================================================== */
+
+.topbar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.busca-container {
+
+    position: relative;
+
+    flex: 1;
+
+}
+
+
+.busca {
+
+    width: 100%;
+
+    padding:
+        15px
+        18px;
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--fundo-card);
+
+    color:
+        var(--texto);
+
+    font-size:
+        15px;
+
+    outline:
+        none;
+
+    box-shadow:
+        var(--sombra);
+
+    transition:
+        .2s;
+
+}
+
+
+.busca:focus {
+
+    border-color:
+        var(--dourado);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,155,60,.14);
+
+}
+
+
+.busca::placeholder {
+
+    color:
+        var(--texto-suave);
+
+}
+
+
+/* ======================================================
+   BOTÃO TEMA
+====================================================== */
+
+.botao-tema {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--fundo-card);
+
+    color:
+        var(--texto);
+
+    cursor:
+        pointer;
+
+    font-size:
+        20px;
+
+    box-shadow:
+        var(--sombra);
+
+    transition:
+        .2s;
+
+}
+
+
+.botao-tema:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        var(--sombra-hover);
+
+}
+
+
+/* ======================================================
+   NAVEGAÇÃO DOS TEMAS
+====================================================== */
+
+.temas-nav {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding-bottom:
+        5px;
+
+    margin-bottom:
+        34px;
+
+    scrollbar-width:
+        thin;
+
+}
+
+
+.temas-nav a {
+
+    flex-shrink: 0;
+
+    text-decoration:
+        none;
+
+    color:
+        var(--azul);
+
+    background:
+        var(--fundo-card);
+
+    border:
+        1px solid
+        var(--borda);
+
+    padding:
+        9px 13px;
+
+    border-radius:
+        20px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    transition:
+        .2s;
+
+}
+
+
+body.dark .temas-nav a {
+
+    color:
+        #DCEAF3;
+
+}
+
+
+.temas-nav a:hover {
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
+    border-color:
+        var(--azul);
+
+}
+
+
+/* ======================================================
+   RESUMO
+====================================================== */
+
+.resumo {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap: 15px;
+
+    margin-bottom:
+        25px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        14px;
+
+}
+
+
+.resumo strong {
+
+    color:
+        var(--texto);
+
+}
+
+
+/* ======================================================
+   TEMA
+====================================================== */
+
+.tema {
+
+    margin-bottom:
+        42px;
+
+    scroll-margin-top:
+        20px;
+
+}
+
+
+.tema.vazia {
+
+    display:
+        none;
+
+}
+
+
+/* ======================================================
+   TÍTULO DO TEMA
+====================================================== */
+
+.tema-titulo {
+
+    display: flex;
+
+    align-items:
+        center;
+
+    gap: 12px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.tema-icone {
+
+    display: flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius:
+        11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-claro)
+        );
+
+    color:
+        white;
+
+    font-size:
+        20px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(20,58,94,.18);
+
+}
+
+
+.tema h2 {
+
+    font-family:
+        "Merriweather",
+        serif;
+
+    font-size:
+        1.3rem;
+
+    color:
+        var(--azul);
+
+    margin:
+        0;
+
+}
+
+
+body.dark .tema h2 {
+
+    color:
+        #DCEAF3;
+
+}
+
+
+.quantidade {
+
+    margin-left:
+        auto;
+
+    font-size:
+        12px;
+
+    color:
+        var(--texto-suave);
+
+    background:
+        var(--fundo-card);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        20px;
+
+    padding:
+        5px 9px;
+
+}
+
+
+/* ======================================================
+   LISTA
+====================================================== */
+
+.lista {
+
+    display:
+        grid;
+
+    gap:
+        10px;
+
+}
+
+
+/* ======================================================
+   MÚSICA
+====================================================== */
+
+.musica {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    padding:
+        14px 15px;
+
+    background:
+        var(--fundo-card);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        var(--raio);
+
+    box-shadow:
+        var(--sombra);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+
+}
+
+
+.musica:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        var(--sombra-hover);
+
+}
+
+
+/* ======================================================
+   NÚMERO
+====================================================== */
+
+.numero {
+
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        9px;
+
+    background:
+        var(--azul-muito-claro);
+
+    color:
+        var(--azul);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+body.dark .numero {
+
+    color:
+        #DCEAF3;
+
+}
+
+
+/* ======================================================
+   NOME
+====================================================== */
+
+.nome {
+
+    flex: 1;
+
+    min-width: 0;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.4;
+
+}
+
+
+/* ======================================================
+   LINKS
+====================================================== */
+
+.links {
+
+    display:
+        flex;
+
+    gap:
+        7px;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.links a {
+
+    text-decoration:
+        none;
+
+    padding:
+        8px 11px;
+
+    border-radius:
+        8px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    transition:
+        .2s;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.letra {
+
+    color:
+        var(--azul);
+
+    background:
+        var(--azul-muito-claro);
+
+}
+
+
+.cifra {
+
+    color:
+        white;
+
+    background:
+        var(--azul);
+
+}
+
+
+.links a:hover {
+
+    transform:
+        translateY(-1px);
+
+    opacity:
+        .85;
+
+}
+
+
+/* ======================================================
+   SEM RESULTADO
+====================================================== */
+
+.sem-resultado {
+
+    display:
+        none;
+
+    padding:
+        15px;
+
+    color:
+        var(--texto-suave);
+
+    text-align:
+        center;
+
+    font-size:
+        14px;
+
+}
+
+
+/* ======================================================
+   BOTÃO VOLTAR AO TOPO
+====================================================== */
+
+#topo {
+
+    position:
+        fixed;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-size:
+        18px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0,0,0,.2);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        .25s;
+
+    z-index:
+        20;
+
+}
+
+
+#topo.visivel {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ======================================================
+   RODAPÉ
+====================================================== */
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        28px 20px;
+
+    border-top:
+        1px solid
+        var(--borda);
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        13px;
+
+}
+
+
+footer strong {
+
+    color:
+        var(--azul);
+
+}
+
+
+body.dark footer strong {
+
+    color:
+        #DCEAF3;
+
+}
+
+
+/* ======================================================
+   RESPONSIVIDADE
+====================================================== */
+
+@media (max-width: 700px) {
+
+
+    header {
+
+        padding:
+            35px 18px 42px;
+
+    }
+
+
+    .abelha {
+
+        width:
+            90px;
+
+        height:
+            90px;
+
+    }
+
+
+    .container {
+
+        padding:
+            22px 14px 55px;
+
+    }
+
+
+    .musica {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .nome {
+
+        flex:
+            1;
+
+    }
+
+
+    .links {
+
+        width:
+            100%;
+
+    }
+
+
+    .links a {
+
+        flex:
+            1;
+
+        text-align:
+            center;
+
+        padding:
+            9px 8px;
+
+    }
+
+
+    .resumo {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .tema h2 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+
+    .quantidade {
+
+        font-size:
+            11px;
+
+    }
+
+}
