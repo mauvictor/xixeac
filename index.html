@@ -1,325 +1,2009 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XIX EAC Cidade Nova - Livro de Cantos</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<title>XIX EAC Cidade Nova — Livro de Cantos</title>
+
+<meta name="description" content="Livro de Cantos do XIX EAC Cidade Nova">
+
+<link rel="icon" type="image/png" href="eac-abelha.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
-    --azul:#143A5E;
-    --dourado:#C89B3C;
-    --fundo:#F8F5EF;
-    --texto:#2B2B2B;
-    --card:#FFFFFF;
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+    --azul: #143a5e;
+    --azul-claro: #1f567d;
+    --azul-muito-claro: #eef4f8;
+
+    --dourado: #c89b3c;
+    --dourado-claro: #e8d19b;
+
+    --fundo: #f7f4ee;
+    --fundo-card: #ffffff;
+
+    --texto: #292929;
+    --texto-suave: #6b6b6b;
+
+    --borda: #e6e1d8;
+
+    --sombra: 0 4px 16px rgba(0, 0, 0, .07);
+    --sombra-hover: 0 8px 24px rgba(0, 0, 0, .12);
+
+    --raio: 14px;
 }
 
-*{box-sizing:border-box;}
 
-body{
-    margin:0;
-    font-family:Inter,sans-serif;
-    background:var(--fundo);
-    color:var(--texto);
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.dark {
+    --fundo: #12171c;
+    --fundo-card: #1b2229;
+
+    --texto: #eeeeee;
+    --texto-suave: #aeb6bd;
+
+    --borda: #303942;
+
+    --azul-muito-claro: #243746;
+
+    --sombra: 0 4px 16px rgba(0, 0, 0, .25);
+    --sombra-hover: 0 8px 24px rgba(0, 0, 0, .35);
 }
 
-header{
-    background:linear-gradient(135deg,var(--azul),#1F567D);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
 }
 
-header h1{
-    font-family:Merriweather,serif;
-    margin:0;
-    font-size:2.2rem;
+html {
+    scroll-behavior: smooth;
 }
 
-header p{
-    margin-top:12px;
-    opacity:.9;
+body {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--fundo);
+    color: var(--texto);
+
+    transition:
+        background .25s ease,
+        color .25s ease;
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:30px 20px 60px;
+button,
+input {
+    font-family: inherit;
 }
 
-.search{
-    width:100%;
-    padding:15px 20px;
-    border:none;
-    border-radius:12px;
-    font-size:16px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    margin-bottom:35px;
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+header {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(200,155,60,.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-claro)
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding:
+        48px
+        20px
+        54px;
+
+    overflow: hidden;
 }
 
-.tema{
-    margin-bottom:35px;
+
+/* brilho decorativo */
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.035);
+
+    top: -160px;
+    left: -80px;
 }
 
-.tema h2{
-    font-family:Merriweather,serif;
-    color:var(--azul);
-    border-left:6px solid var(--dourado);
-    padding-left:12px;
+
+/* abelha */
+
+.abelha {
+    position: relative;
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+    filter:
+        drop-shadow(
+            0 6px 10px rgba(0,0,0,.25)
+        );
+
+    transition: transform .25s ease;
 }
 
-.lista{
-    display:grid;
-    gap:12px;
+.abelha:hover {
+    transform: scale(1.06) rotate(-2deg);
 }
 
-.musica{
-    background:var(--card);
-    border-radius:12px;
-    padding:16px 18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 3px 10px rgba(0,0,0,.06);
-    transition:.2s;
+
+/* títulos */
+
+header h1 {
+    position: relative;
+
+    font-family: "Merriweather", serif;
+
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+
+    margin: 0;
+
+    letter-spacing: -.5px;
 }
 
-.musica:hover{
-    transform:translateY(-2px);
-    box-shadow:0 6px 16px rgba(0,0,0,.10);
+header p {
+    position: relative;
+
+    margin:
+        10px
+        0
+        0;
+
+    font-size: 1rem;
+
+    opacity: .88;
 }
 
-.nome{
-    font-weight:600;
+
+/* linha dourada */
+
+.linha-dourada {
+    width: 65px;
+    height: 3px;
+
+    background: var(--dourado);
+
+    margin:
+        18px
+        auto
+        0;
+
+    border-radius: 10px;
 }
 
-.links{
-    display:flex;
-    gap:10px;
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    padding:
+        30px
+        20px
+        70px;
 }
 
-.links a{
-    text-decoration:none;
-    padding:8px 12px;
-    border-radius:8px;
-    font-size:14px;
-    transition:.2s;
+
+/* =========================================================
+   BARRA SUPERIOR
+========================================================= */
+
+.topbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
 }
 
-.letra{
-    background:#EEF4F8;
-    color:var(--azul);
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+.busca-container {
+    position: relative;
+
+    flex: 1;
 }
 
-.cifra{
-    background:var(--azul);
-    color:white;
+.busca {
+    width: 100%;
+
+    padding:
+        15px
+        48px
+        15px
+        18px;
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: 12px;
+
+    background: var(--fundo-card);
+
+    color: var(--texto);
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-shadow: var(--sombra);
+
+    transition: .2s;
 }
 
-.links a:hover{
-    opacity:.85;
+.busca:focus {
+    border-color: var(--dourado);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,155,60,.14);
 }
 
-footer{
-    text-align:center;
-    padding:25px;
-    color:#666;
-    font-size:14px;
+.icone-busca {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--texto-suave);
+
+    font-size: 18px;
 }
 
-@media(max-width:700px){
 
-.musica{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
+/* =========================================================
+   BOTÃO TEMA
+========================================================= */
+
+.botao-tema {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
+
+    background: var(--fundo-card);
+
+    color: var(--texto);
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    box-shadow: var(--sombra);
+
+    transition: .2s;
 }
 
-.links{
-    width:100%;
+.botao-tema:hover {
+    transform: translateY(-2px);
+
+    box-shadow: var(--sombra-hover);
 }
 
-.links a{
-    flex:1;
-    text-align:center;
+
+/* =========================================================
+   NAVEGAÇÃO DOS TEMAS
+========================================================= */
+
+.temas-nav {
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    margin-bottom: 34px;
+
+    scrollbar-width: thin;
 }
 
+.temas-nav a {
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+    color: var(--azul);
+
+    background: var(--fundo-card);
+
+    border:
+        1px solid
+        var(--borda);
+
+    padding:
+        9px
+        13px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+body.dark .temas-nav a {
+    color: #dceaf3;
+}
+
+.temas-nav a:hover {
+    background: var(--azul);
+
+    color: white;
+
+    border-color: var(--azul);
+}
+
+
+/* =========================================================
+   CABEÇALHO DA LISTA
+========================================================= */
+
+.resumo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    color: var(--texto-suave);
+
+    font-size: 14px;
+}
+
+.resumo strong {
+    color: var(--texto);
+}
+
+
+/* =========================================================
+   TEMA
+========================================================= */
+
+.tema {
+    margin-bottom: 42px;
+
+    scroll-margin-top: 20px;
+}
+
+
+/* título */
+
+.tema-titulo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.tema-icone {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-claro)
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(20,58,94,.18);
+}
+
+.tema h2 {
+    font-family: "Merriweather", serif;
+
+    font-size: 1.3rem;
+
+    color: var(--azul);
+
+    margin: 0;
+}
+
+body.dark .tema h2 {
+    color: #dceaf3;
+}
+
+.quantidade {
+    margin-left: auto;
+
+    font-size: 12px;
+
+    color: var(--texto-suave);
+
+    background: var(--fundo-card);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    padding:
+        5px
+        9px;
+}
+
+
+/* =========================================================
+   LISTA
+========================================================= */
+
+.lista {
+    display: grid;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   MÚSICA
+========================================================= */
+
+.musica {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+        14px
+        15px;
+
+    background: var(--fundo-card);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+}
+
+.musica:hover {
+    transform: translateY(-2px);
+
+    box-shadow: var(--sombra-hover);
+}
+
+
+/* número */
+
+.numero {
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--azul-muito-claro);
+
+    color: var(--azul);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+body.dark .numero {
+    color: #dceaf3;
+}
+
+
+/* nome */
+
+.nome-musica {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.nome {
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+.subtitulo {
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   FAVORITO
+========================================================= */
+
+.favorito {
+    flex-shrink: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #b8b8b8;
+
+    cursor: pointer;
+
+    font-size: 19px;
+
+    padding: 5px;
+
+    transition: .2s;
+}
+
+.favorito:hover,
+.favorito.ativo {
+    color: var(--dourado);
+
+    transform: scale(1.12);
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.links {
+    display: flex;
+
+    gap: 7px;
+}
+
+.links a {
+    text-decoration: none;
+
+    padding:
+        8px
+        11px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .2s;
+
+    white-space: nowrap;
+}
+
+.letra {
+    color: var(--azul);
+
+    background: var(--azul-muito-claro);
+}
+
+.cifra {
+    color: white;
+
+    background: var(--azul);
+}
+
+.links a:hover {
+    transform: translateY(-1px);
+
+    opacity: .85;
+}
+
+
+/* =========================================================
+   SEM RESULTADO
+========================================================= */
+
+.sem-resultado {
+    display: none;
+
+    padding:
+        15px;
+
+    color: var(--texto-suave);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.tema.vazia .sem-resultado {
+    display: block;
+}
+
+.tema.vazia .lista {
+    display: none;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+#topo {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 46px;
+    height: 46px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--azul);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0,0,0,.2);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: .25s;
+
+    z-index: 20;
+}
+
+#topo.visivel {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+footer {
+    text-align: center;
+
+    padding:
+        28px
+        20px;
+
+    border-top:
+        1px solid
+        var(--borda);
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+}
+
+footer strong {
+    color: var(--azul);
+}
+
+body.dark footer strong {
+    color: #dceaf3;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding:
+            35px
+            18px
+            42px;
+    }
+
+    .abelha {
+        width: 90px;
+        height: 90px;
+    }
+
+    .container {
+        padding:
+            22px
+            14px
+            55px;
+    }
+
+    .topbar {
+        align-items: stretch;
+    }
+
+    .musica {
+        flex-wrap: wrap;
+    }
+
+    .nome-musica {
+        flex-basis: calc(100% - 95px);
+    }
+
+    .favorito {
+        margin-left: auto;
+    }
+
+    .links {
+        width: 100%;
+    }
+
+    .links a {
+        flex: 1;
+
+        text-align: center;
+
+        padding:
+            9px
+            8px;
+    }
+
+    .resumo {
+        align-items: flex-start;
+    }
+
+    .tema h2 {
+        font-size: 1.15rem;
+    }
 }
 
 </style>
 </head>
 
+
 <body>
 
+
+<!-- ======================================================
+     CABEÇALHO
+====================================================== -->
+
 <header>
-<h1>XIX EAC Cidade Nova</h1>
-<p>Livro de Cantos Digital</p>
+
+    <img
+        src="eac-abelha.png"
+        alt="Abelha símbolo do EAC"
+        class="abelha"
+    >
+
+    <h1>XIX EAC Cidade Nova</h1>
+
+    <p>Livro de Cantos Digital</p>
+
+    <div class="linha-dourada"></div>
+
 </header>
 
-<div class="container">
 
-<input id="busca" class="search" placeholder="🔎 Procurar uma música...">
+<!-- ======================================================
+     CONTEÚDO
+====================================================== -->
 
-<!-- ESPÍRITO SANTO -->
+<main class="container">
 
-<section class="tema">
 
-<h2>Espírito Santo</h2>
+    <!-- BUSCA + TEMA -->
 
-<div class="lista">
+    <div class="topbar">
 
-<div class="musica" data-name="Vem Espírito Santo">
-<div class="nome">Vem Espírito Santo</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+        <div class="busca-container">
 
-<div class="musica" data-name="Incendeia Minha Alma">
-<div class="nome">Incendeia Minha Alma</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+            <input
+                type="search"
+                id="busca"
+                class="busca"
+                placeholder="Procurar uma música..."
+                autocomplete="off"
+            >
 
-</div>
+            <span class="icone-busca">⌕</span>
 
-</section>
+        </div>
 
-<!-- MARIA -->
 
-<section class="tema">
+        <button
+            id="botaoTema"
+            class="botao-tema"
+            title="Alternar modo claro/escuro"
+            aria-label="Alternar modo claro/escuro"
+        >
+            🌙
+        </button>
 
-<h2>Maria</h2>
+    </div>
 
-<div class="lista">
 
-<div class="musica" data-name="Maria de Deus Senhora da Paz">
-<div class="nome">Maria de Deus, Senhora da Paz</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+    <!-- NAVEGAÇÃO -->
 
-<div class="musica" data-name="Mãezinha do Céu">
-<div class="nome">Mãezinha do Céu</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+    <nav class="temas-nav" aria-label="Temas">
 
-</div>
+        <a href="#espirito">🕊️ Espírito Santo</a>
 
-</section>
+        <a href="#maria">🌹 Maria</a>
 
-<!-- LOUVOR -->
+        <a href="#louvor">🎶 Louvor e Adoração</a>
 
-<section class="tema">
+        <a href="#reflexao">💭 Reflexão</a>
 
-<h2>Louvor e Adoração</h2>
+        <a href="#diversos">✨ Diversos</a>
 
-<div class="lista">
+    </nav>
 
-<div class="musica" data-name="Aclame ao Senhor">
-<div class="nome">Aclame ao Senhor</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
 
-<div class="musica" data-name="Te Louvarei">
-<div class="nome">Te Louvarei</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+    <!-- RESUMO -->
 
-</div>
+    <div class="resumo">
 
-</section>
+        <span>
+            <strong id="totalMusicas">0</strong>
+            músicas
+        </span>
 
-<!-- REFLEXÃO -->
+        <span id="resultadoBusca"></span>
 
-<section class="tema">
+    </div>
 
-<h2>Reflexão</h2>
 
-<div class="lista">
 
-<div class="musica" data-name="Quem Nos Separará">
-<div class="nome">Quem Nos Separará</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+    <!-- ==================================================
+         ESPÍRITO SANTO
+    ================================================== -->
 
-<div class="musica" data-name="Senhor Quem Entrará">
-<div class="nome">Senhor, Quem Entrará?</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+    <section
+        class="tema"
+        id="espirito"
+        data-tema="Espírito Santo"
+    >
 
-</div>
+        <div class="tema-titulo">
 
-</section>
+            <div class="tema-icone">
+                🕊️
+            </div>
 
-<!-- DIVERSOS -->
+            <h2>Espírito Santo</h2>
 
-<section class="tema">
+            <span class="quantidade"></span>
 
-<h2>Diversos</h2>
+        </div>
 
-<div class="lista">
 
-<div class="musica" data-name="Restauração">
-<div class="nome">Restauração</div>
-<div class="links">
-<a class="letra" href="#">Letra</a>
-<a class="cifra" href="#">Cifra</a>
-</div>
-</div>
+        <div class="lista">
 
-</div>
 
-</section>
+            <div
+                class="musica"
+                data-name="Vem Espírito Santo"
+            >
 
-</div>
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Vem Espírito Santo
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="musica"
+                data-name="Incendeia Minha Alma"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Incendeia Minha Alma
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sem-resultado">
+            Nenhuma música encontrada neste tema.
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         MARIA
+    ================================================== -->
+
+    <section
+        class="tema"
+        id="maria"
+        data-tema="Maria"
+    >
+
+        <div class="tema-titulo">
+
+            <div class="tema-icone">
+                🌹
+            </div>
+
+            <h2>Maria</h2>
+
+            <span class="quantidade"></span>
+
+        </div>
+
+
+        <div class="lista">
+
+
+            <div
+                class="musica"
+                data-name="Maria de Deus Senhora da Paz"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Maria de Deus, Senhora da Paz
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="musica"
+                data-name="Mãezinha do Céu"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Mãezinha do Céu
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sem-resultado">
+            Nenhuma música encontrada neste tema.
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LOUVOR E ADORAÇÃO
+    ================================================== -->
+
+    <section
+        class="tema"
+        id="louvor"
+        data-tema="Louvor e Adoração"
+    >
+
+        <div class="tema-titulo">
+
+            <div class="tema-icone">
+                🎶
+            </div>
+
+            <h2>Louvor e Adoração</h2>
+
+            <span class="quantidade"></span>
+
+        </div>
+
+
+        <div class="lista">
+
+
+            <div
+                class="musica"
+                data-name="Aclame ao Senhor"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Aclame ao Senhor
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="musica"
+                data-name="Te Louvarei"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Te Louvarei
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sem-resultado">
+            Nenhuma música encontrada neste tema.
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         REFLEXÃO
+    ================================================== -->
+
+    <section
+        class="tema"
+        id="reflexao"
+        data-tema="Reflexão"
+    >
+
+        <div class="tema-titulo">
+
+            <div class="tema-icone">
+                💭
+            </div>
+
+            <h2>Reflexão</h2>
+
+            <span class="quantidade"></span>
+
+        </div>
+
+
+        <div class="lista">
+
+
+            <div
+                class="musica"
+                data-name="Quem Nos Separará"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Quem Nos Separará
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="musica"
+                data-name="Senhor Quem Entrará"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Senhor, Quem Entrará?
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sem-resultado">
+            Nenhuma música encontrada neste tema.
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         DIVERSOS
+    ================================================== -->
+
+    <section
+        class="tema"
+        id="diversos"
+        data-tema="Diversos"
+    >
+
+        <div class="tema-titulo">
+
+            <div class="tema-icone">
+                ✨
+            </div>
+
+            <h2>Diversos</h2>
+
+            <span class="quantidade"></span>
+
+        </div>
+
+
+        <div class="lista">
+
+
+            <div
+                class="musica"
+                data-name="Restauração"
+            >
+
+                <div class="numero"></div>
+
+                <div class="nome-musica">
+
+                    <div class="nome">
+                        Restauração
+                    </div>
+
+                </div>
+
+                <button
+                    class="favorito"
+                    title="Adicionar aos favoritos"
+                    aria-label="Adicionar aos favoritos"
+                >
+                    ☆
+                </button>
+
+                <div class="links">
+
+                    <a
+                        class="letra"
+                        href="#"
+                    >
+                        Letra
+                    </a>
+
+                    <a
+                        class="cifra"
+                        href="#"
+                    >
+                        Cifra
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sem-resultado">
+            Nenhuma música encontrada neste tema.
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ======================================================
+     RODAPÉ
+====================================================== -->
 
 <footer>
-XIX EAC Cidade Nova • Livro de Cantos Digital
+
+    <strong>XIX EAC Cidade Nova</strong>
+
+    <br>
+
+    Livro de Cantos Digital
+
 </footer>
+
+
+<!-- ======================================================
+     BOTÃO TOPO
+====================================================== -->
+
+<button
+    id="topo"
+    title="Voltar ao topo"
+    aria-label="Voltar ao topo"
+>
+    ↑
+</button>
+
+
 
 <script>
 
-const busca=document.getElementById("busca");
+/* =========================================================
+   ELEMENTOS
+========================================================= */
 
-busca.addEventListener("input",()=>{
+const busca = document.getElementById("busca");
 
-const termo=busca.value.toLowerCase();
+const totalMusicas =
+    document.getElementById("totalMusicas");
 
-document.querySelectorAll(".musica").forEach(item=>{
+const resultadoBusca =
+    document.getElementById("resultadoBusca");
 
-const nome=item.dataset.name.toLowerCase();
+const botaoTema =
+    document.getElementById("botaoTema");
 
-item.style.display=nome.includes(termo)?"flex":"none";
+const botaoTopo =
+    document.getElementById("topo");
 
-});
+const musicas =
+    document.querySelectorAll(".musica");
 
-});
+const temas =
+    document.querySelectorAll(".tema");
+
+
+/* =========================================================
+   NORMALIZAR TEXTO
+   Permite buscar "maria" e encontrar "Maria",
+   inclusive ignorando acentos.
+========================================================= */
+
+function normalizar(texto) {
+
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+}
+
+
+/* =========================================================
+   NUMERAÇÃO E CONTADORES
+========================================================= */
+
+function atualizarNumeracao() {
+
+    let total = 0;
+
+    temas.forEach(tema => {
+
+        const lista =
+            tema.querySelector(".lista");
+
+        const itens =
+            lista.querySelectorAll(".musica");
+
+        const quantidade =
+            tema.querySelector(".quantidade");
+
+        quantidade.textContent =
+            `${itens.length} ${
+                itens.length === 1
+                ? "música"
+                : "músicas"
+            }`;
+
+        itens.forEach((musica, index) => {
+
+            musica.querySelector(".numero")
+                .textContent =
+                String(index + 1)
+                    .padStart(2, "0");
+
+            total++;
+
+        });
+
+    });
+
+    totalMusicas.textContent = total;
+
+}
+
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+function executarBusca() {
+
+    const termo =
+        normalizar(busca.value.trim());
+
+    let encontrados = 0;
+
+    temas.forEach(tema => {
+
+        const itens =
+            tema.querySelectorAll(".musica");
+
+        let encontradosTema = 0;
+
+        itens.forEach(musica => {
+
+            const nome =
+                normalizar(
+                    musica.dataset.name
+                );
+
+            const encontrado =
+                nome.includes(termo);
+
+            musica.style.display =
+                encontrado
+                ? ""
+                : "none";
+
+            if (encontrado) {
+
+                encontrados++;
+                encontradosTema++;
+
+            }
+
+        });
+
+
+        /* mostra/oculta categoria */
+
+        if (termo && encontradosTema === 0) {
+
+            tema.classList.add("vazia");
+
+        } else {
+
+            tema.classList.remove("vazia");
+
+        }
+
+    });
+
+
+    /* informação da busca */
+
+    if (termo) {
+
+        resultadoBusca.textContent =
+            encontrados === 1
+            ? "1 resultado"
+            : `${encontrados} resultados`;
+
+    } else {
+
+        resultadoBusca.textContent = "";
+
+    }
+
+}
+
+
+/* =========================================================
+   FAVORITOS
+========================================================= */
+
+const FAVORITOS_KEY =
+    "xixeac-favoritos";
+
+
+function carregarFavoritos() {
+
+    let favoritos = [];
+
+    try {
+
+        favoritos =
+            JSON.parse(
+                localStorage.getItem(
+                    FAVORITOS_KEY
+                )
+            ) || [];
+
+    } catch (erro) {
+
+        favoritos = [];
+
+    }
+
+
+    document
+        .querySelectorAll(".musica")
+        .forEach(musica => {
+
+            const nome =
+                musica.dataset.name;
+
+            const botao =
+                musica.querySelector(".favorito");
+
+            if (
+                favoritos.includes(nome)
+            ) {
+
+                botao.classList.add("ativo");
+
+                botao.textContent = "★";
+
+                botao.title =
+                    "Remover dos favoritos";
+
+            }
+
+        });
+
+}
+
+
+function salvarFavoritos() {
+
+    const favoritos = [];
+
+    document
+        .querySelectorAll(".musica")
+        .forEach(musica => {
+
+            const botao =
+                musica.querySelector(".favorito");
+
+            if (
+                botao.classList.contains("ativo")
+            ) {
+
+                favoritos.push(
+                    musica.dataset.name
+                );
+
+            }
+
+        });
+
+    localStorage.setItem(
+        FAVORITOS_KEY,
+        JSON.stringify(favoritos)
+    );
+
+}
+
+
+document
+    .querySelectorAll(".favorito")
+    .forEach(botao => {
+
+        botao.addEventListener(
+            "click",
+            () => {
+
+                botao.classList.toggle(
+                    "ativo"
+                );
+
+                const ativo =
+                    botao.classList.contains(
+                        "ativo"
+                    );
+
+                botao.textContent =
+                    ativo ? "★" : "☆";
+
+                botao.title =
+                    ativo
+                    ? "Remover dos favoritos"
+                    : "Adicionar aos favoritos";
+
+                salvarFavoritos();
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+const TEMA_KEY =
+    "xixeac-tema";
+
+
+function carregarTema() {
+
+    const tema =
+        localStorage.getItem(TEMA_KEY);
+
+    if (tema === "dark") {
+
+        document.body.classList.add("dark");
+
+        botaoTema.textContent = "☀️";
+
+    }
+
+}
+
+
+botaoTema.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "dark"
+        );
+
+        const escuro =
+            document.body.classList
+                .contains("dark");
+
+        botaoTema.textContent =
+            escuro ? "☀️" : "🌙";
+
+        localStorage.setItem(
+            TEMA_KEY,
+            escuro ? "dark" : "light"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (window.scrollY > 400) {
+
+            botaoTopo.classList.add(
+                "visivel"
+            );
+
+        } else {
+
+            botaoTopo.classList.remove(
+                "visivel"
+            );
+
+        }
+
+    }
+);
+
+
+botaoTopo.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+);
+
+
+/* =========================================================
+   BUSCA EM TEMPO REAL
+========================================================= */
+
+busca.addEventListener(
+    "input",
+    executarBusca
+);
+
+
+/* =========================================================
+   ESC PARA LIMPAR BUSCA
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    evento => {
+
+        if (
+            evento.key === "Escape" &&
+            document.activeElement === busca
+        ) {
+
+            busca.value = "";
+
+            executarBusca();
+
+            busca.blur();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ATALHO "/" PARA BUSCA
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    evento => {
+
+        if (
+            evento.key === "/" &&
+            document.activeElement !== busca &&
+            !["INPUT", "TEXTAREA"].includes(
+                document.activeElement.tagName
+            )
+        ) {
+
+            evento.preventDefault();
+
+            busca.focus();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+
+atualizarNumeracao();
+
+carregarFavoritos();
+
+carregarTema();
 
 </script>
 
 </body>
 </html>
+```
