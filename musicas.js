@@ -84,31 +84,37 @@ const musicas = [
         musicas: [
 
             {
-                nome: "A Primeira Que Comungou",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/caminho-da-paz/a-primeira-que-comungou/"
+                nome: "A Primeira Que Comungou - Toca de Assis",
+                letra: "https://www.letras.mus.br/toca-de-assis/767271/",
+                cifra: "https://www.cifraclub.com.br/toca-de-assis/a-primeira-que-comungou/"
             },
 
             {
-                nome: "Cheiro de Rosas",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/paulinho-sa/cheiro-de-rosas/"
+                nome: "Cheiro de Rosas - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/cheiro-de-rosas/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/cheiro-de-rosas/"
             },
 
             {
-                nome: "Colo de Mãe",
-                letra: "https://frei-gilson.musicas.mus.br/letras/3149676/",
+                nome: "Colo de Mãe - Frei Gilson",
+                letra: "https://www.letras.mus.br/frei-gilson/colo-de-mae/",
                 cifra: "https://www.cifraclub.com.br/frei-gilson/colo-de-mae/"
             },
 
             {
-                nome: "Eis Aí Tua Mãe",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/emanuel-stenio/eis-ai-tua-mae/"
+                nome: "Consagração à Nossa Senhora - Músicas Católicas",
+                letra: "https://www.letras.mus.br/catolicas/1169030/",
+                cifra: "https://www.cifraclub.com.br/catolicas/consagracao--nossa-senhora/"
             },
 
             {
-                nome: "Vem Pro Colo da Mãe",
+                nome: "Eis Aí Tua Mãe - Vida Reluz",
+                letra: "https://www.letras.mus.br/vida-reluz/133133/",
+                cifra: "https://www.cifraclub.com.br/vida-reluz/eis-ai-tua-mae/"
+            },
+
+            {
+                nome: "Vem Pro Colo da Mãe - Músicas Católicas",
                 letra: "#",
                 cifra: "https://www.cifraclub.com.br/catolicas/vem-pro-colo-da-mae/"
             }
@@ -259,8 +265,13 @@ const musicas = [
                 nome: "Tudo Posso",
                 letra: "#",
                 cifra: "https://www.cifraclub.com.br/celina-borges/tudo-posso/"
-            }
-
+            },
+         
+            {
+                nome: "Verdades do Tempo",
+                letra: "#",
+                cifra: "https://www.cifraclub.com.br/thiago-brado/verdades-do-tempo/"
+            },
         ]
     },
 
@@ -309,6 +320,12 @@ const musicas = [
             },
 
             {
+                nome: "Mística Sublime - Colo de Deus",
+                letra: "#",
+                cifra: "#"
+            },
+         
+            {
                 nome: "Nas Asas do Senhor",
                 letra: "#",
                 cifra: "https://www.cifraclub.com.br/eros-biondini/nas-asas-do-senhor/"
@@ -342,12 +359,6 @@ const musicas = [
                 nome: "Tua Família",
                 letra: "#",
                 cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/tua-familia/"
-            },
-
-            {
-                nome: "Verdades do Tempo",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/thiago-brado/verdades-do-tempo/"
             },
 
             {
