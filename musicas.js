@@ -214,12 +214,6 @@ const musicas = [
             },
 
             {
-                nome: "O Poço",
-                letra: "#",
-                cifra: "#"
-            },
-
-            {
                 nome: "Reflexo - Toca de Assis",
                 letra: "https://www.letras.mus.br/toca-de-assis/1354889/",
                 cifra: "https://www.cifraclub.com.br/toca-de-assis/reflexo/"
@@ -263,6 +257,12 @@ const musicas = [
         icone: "✨",
 
         musicas: [
+           {
+                nome: "Amigos pela Fé - Anjos de Resgate",
+                letra: "https://www.letras.mus.br/anjos-de-resgate-musicas/291759/#album:-que-amigos-ao-vivo",
+                cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/amigos-pela-fe/"
+            },
+         
             {
                 nome: "Casa - Colo de Deus",
                 letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/casa/",
@@ -282,69 +282,57 @@ const musicas = [
             },
 
             {
-                nome: "Mais Que Amigos",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/mais-que-amigos/"
-            },
-
-            {
-                nome: "Minha Essência",
-                letra: "#",
-                cifra: "#"
+                nome: "Minha Essência - Thiago Brado",
+                letra: "https://www.letras.mus.br/thiago-brado/minha-essencia/",
+                cifra: "https://www.cifraclub.com.br/thiago-brado/minha-essencia/"
             },
 
             {
                 nome: "Mística Sublime - Colo de Deus",
-                letra: "#",
-                cifra: "#"
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/mistica-sublime/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/mistica-sublime/"
             },
          
             {
-                nome: "Nas Asas do Senhor",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/eros-biondini/nas-asas-do-senhor/"
+                nome: "Nas Asas do Senhor - Celina Borges",
+                letra: "https://www.letras.mus.br/celina-borges/1573986/",
+                cifra: "https://www.cifraclub.com.br/celina-borges/nas-asas-do-senhor/"
             },
 
             {
-                nome: "Peregrino do Amor",
-                letra: "#",
+                nome: "Peregrino do Amor - Anjos de Resgate",
+                letra: "https://www.letras.mus.br/anjos-de-resgate-musicas/569389/",
                 cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/peregrino-do-amor/"
             },
 
             {
-                nome: "Primavera",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/catolica-jovem/primavera/"
+                nome: "Primavera - Kennia",
+                letra: "https://www.letras.mus.br/kennia/504136/",
+                cifra: "https://www.cifraclub.com.br/kennia/primavera/"
             },
 
             {
-                nome: "Raridade",
-                letra: "#",
-                cifra: "#"
+                nome: "Raridade - Anderson Freire",
+                letra: "https://www.letras.mus.br/anderson-freire/raridade/",
+                cifra: "https://www.cifraclub.com.br/anderson-freire/raridade/"
             },
 
             {
-                nome: "Seu Amor É Demais",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/catolica-jovem/seu-amor-e-demais/"
+                nome: "Seu Amor É Demais - Banda Dom",
+                letra: "https://www.letras.mus.br/banda-dom/167011/",
+                cifra: "https://www.cifraclub.com.br/banda-dom/seu-amor-demais/"
             },
 
             {
-                nome: "Tua Família",
-                letra: "#",
+                nome: "Tua Família - Anjos de Resgate",
+                letra: "https://www.letras.mus.br/anjos-de-resgate-musicas/167357/",
                 cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/tua-familia/"
             },
 
             {
-                nome: "Você É Especial Pra Deus",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/alianca-de-vida/voce-especial-pra-deus/"
-            },
-
-            {
-                nome: "Você Vai Chegar",
-                letra: "#",
-                cifra: "#"
+                nome: "Você Vai Chegar - Ramon e Rafael",
+                letra: "https://www.letras.mus.br/ramon-e-rafael/voce-vai-chegar/",
+                cifra: "https://www.cifraclub.com.br/ramon-e-rafael/voce-vai-chegar/"
             }
         ]
     }
