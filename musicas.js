@@ -279,15 +279,21 @@ const musicas = [
         musicas: [
 
             {
-                nome: "Desperta o Santo Dentro de Mim",
-                letra: "#",
+                nome: "Casa - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/casa/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/casa/"
+            },
+         
+            {
+                nome: "Desperta o Santo Dentro de Mim - Arthur Endy",
+                letra: "https://www.letras.mus.br/arthur-endy/desperta-o-santo-dentro-de-mim/",
                 cifra: "https://www.cifraclub.com.br/arthur-endy/desperta-o-santo-dentro-de-mim/"
             },
 
             {
-                nome: "É Tudo Sobre Você",
-                letra: "#",
-                cifra: "#"
+                nome: "É Tudo Sobre Você - Morada",
+                letra: "https://www.letras.mus.br/ministerio-morada/e-tudo-sobre-voce/",
+                cifra: "https://www.cifraclub.com.br/ministerio-morada/e-tudo-sobre-voce/"
             },
 
             {
