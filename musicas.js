@@ -14,7 +14,6 @@
 =========================================================
 */
 
-
 const musicas = [
 
     /*
@@ -29,7 +28,6 @@ const musicas = [
         icone: "🕊️",
 
         musicas: [
-
             {
                 nome: "Coração Adorador - Banda Dom",
                 letra: "https://www.letras.mus.br/banda-dom/205471/",
@@ -65,10 +63,8 @@ const musicas = [
                 letra: "https://www.letras.mus.br/irma-ana-paula-cmes/sopra-em-nos/",
                 cifra: "https://www.cifraclub.com.br/irma-ana-paula-cmes/sopra-em-nos/"
             }
-
         ]
     },
-
 
     /*
     =====================================================
@@ -82,7 +78,6 @@ const musicas = [
         icone: "🌹",
 
         musicas: [
-
             {
                 nome: "A Primeira Que Comungou - Toca de Assis",
                 letra: "https://www.letras.mus.br/toca-de-assis/767271/",
@@ -118,10 +113,8 @@ const musicas = [
                 letra: "#",
                 cifra: "https://www.cifraclub.com.br/catolicas/vem-pro-colo-da-mae/"
             }
-
         ]
     },
-
 
     /*
     =====================================================
@@ -135,64 +128,61 @@ const musicas = [
         icone: "🎶",
 
         musicas: [
-
             {
-                nome: "A Ele a Glória",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/diante-do-trono/a-ele-gloria/"
+                nome: "A Ele a Glória - Músicas Católicas",
+                letra: "https://www.letras.mus.br/padre-marcelo-rossi/291751/",
+                cifra: "https://www.cifraclub.com.br/catolicas/a-ele-gloria/"
             },
 
             {
-                nome: "Busque o Alto",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/banda-god-first/busque-o-alto-/"
+                nome: "Busque o Alto - Celina Borges",
+                letra: "https://www.letras.mus.br/celina-borges/219395/",
+                cifra: "https://www.cifraclub.com.br/celina-borges/busque-alto/"
             },
 
             {
-                nome: "Diante do Rei",
-                letra: "#",
+                nome: "Diante do Rei - Vida Reluz",
+                letra: "https://www.letras.mus.br/vida-reluz/77581/",
                 cifra: "https://www.cifraclub.com.br/vida-reluz/diante-do-rei/"
             },
-
+         
             {
-                nome: "Não Vou Parar",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/banda-renascer/nao-vou-parar/"
+                nome: "Eis-Me Aqui - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/eis-me-aqui/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/eis-me-aqui/"
+            },
+         
+            {
+                nome: "Não Vou Parar de te adorar - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/nao-vou-parar/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/nao-vou-parar/"
             },
 
             {
-                nome: "Pescador de Cristo",
-                letra: "#",
+                nome: "Pescador de Cristo - Músicas Católicas",
+                letra: "https://www.letras.mus.br/catolicas/pescador-de-cristo/",
                 cifra: "https://www.cifraclub.com.br/catolicas/pescador-de-cristo/"
             },
 
             {
-                nome: "Queima de Novo",
-                letra: "#",
+                nome: "Queima de Novo - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/queima-de-novo/",
                 cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/queima-de-novo/"
             },
 
             {
-                nome: "Ressuscitou",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/comunidade-catolica-shalom/ressuscitou/"
-            },
-
-            {
-                nome: "Sacramento da Comunhão",
-                letra: "#",
+                nome: "Sacramento da Comunhão - Músicas Católicas",
+                letra: "https://www.letras.mus.br/catolicas/1928545/",
                 cifra: "https://www.cifraclub.com.br/catolicas/sacramento-da-comunhao/"
             },
 
             {
-                nome: "Yeshua",
-                letra: "#",
+                nome: "Yeshua - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/yeshua/",
                 cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/yeshua/"
             }
-
         ]
     },
-
 
     /*
     =====================================================
@@ -206,7 +196,6 @@ const musicas = [
         icone: "💭",
 
         musicas: [
-
             {
                 nome: "Abraço de Pai",
                 letra: "#",
@@ -275,7 +264,6 @@ const musicas = [
         ]
     },
 
-
     /*
     =====================================================
     DIVERSOS
@@ -288,7 +276,6 @@ const musicas = [
         icone: "✨",
 
         musicas: [
-
             {
                 nome: "Casa - Colo de Deus",
                 letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/casa/",
@@ -372,8 +359,6 @@ const musicas = [
                 letra: "#",
                 cifra: "#"
             }
-
         ]
     }
-
 ];
