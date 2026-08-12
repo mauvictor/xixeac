@@ -1,7 +1,325 @@
-<html>
-  <head><title>XIX EAC Cidade Nova</title></head>
-  <body>
-    <h1>XIX EAC Cidade Nova</h1>
-  <h2>Tema Espírito Santo</h2>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XIX EAC Cidade Nova - Livro de Cantos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --azul:#143A5E;
+    --dourado:#C89B3C;
+    --fundo:#F8F5EF;
+    --texto:#2B2B2B;
+    --card:#FFFFFF;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:Inter,sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+}
+
+header{
+    background:linear-gradient(135deg,var(--azul),#1F567D);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-family:Merriweather,serif;
+    margin:0;
+    font-size:2.2rem;
+}
+
+header p{
+    margin-top:12px;
+    opacity:.9;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px 60px;
+}
+
+.search{
+    width:100%;
+    padding:15px 20px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    margin-bottom:35px;
+}
+
+.tema{
+    margin-bottom:35px;
+}
+
+.tema h2{
+    font-family:Merriweather,serif;
+    color:var(--azul);
+    border-left:6px solid var(--dourado);
+    padding-left:12px;
+}
+
+.lista{
+    display:grid;
+    gap:12px;
+}
+
+.musica{
+    background:var(--card);
+    border-radius:12px;
+    padding:16px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+    transition:.2s;
+}
+
+.musica:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px rgba(0,0,0,.10);
+}
+
+.nome{
+    font-weight:600;
+}
+
+.links{
+    display:flex;
+    gap:10px;
+}
+
+.links a{
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:14px;
+    transition:.2s;
+}
+
+.letra{
+    background:#EEF4F8;
+    color:var(--azul);
+}
+
+.cifra{
+    background:var(--azul);
+    color:white;
+}
+
+.links a:hover{
+    opacity:.85;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+.musica{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.links{
+    width:100%;
+}
+
+.links a{
+    flex:1;
+    text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>XIX EAC Cidade Nova</h1>
+<p>Livro de Cantos Digital</p>
+</header>
+
+<div class="container">
+
+<input id="busca" class="search" placeholder="🔎 Procurar uma música...">
+
+<!-- ESPÍRITO SANTO -->
+
+<section class="tema">
+
+<h2>Espírito Santo</h2>
+
+<div class="lista">
+
+<div class="musica" data-name="Vem Espírito Santo">
+<div class="nome">Vem Espírito Santo</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+<div class="musica" data-name="Incendeia Minha Alma">
+<div class="nome">Incendeia Minha Alma</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- MARIA -->
+
+<section class="tema">
+
+<h2>Maria</h2>
+
+<div class="lista">
+
+<div class="musica" data-name="Maria de Deus Senhora da Paz">
+<div class="nome">Maria de Deus, Senhora da Paz</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+<div class="musica" data-name="Mãezinha do Céu">
+<div class="nome">Mãezinha do Céu</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- LOUVOR -->
+
+<section class="tema">
+
+<h2>Louvor e Adoração</h2>
+
+<div class="lista">
+
+<div class="musica" data-name="Aclame ao Senhor">
+<div class="nome">Aclame ao Senhor</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+<div class="musica" data-name="Te Louvarei">
+<div class="nome">Te Louvarei</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- REFLEXÃO -->
+
+<section class="tema">
+
+<h2>Reflexão</h2>
+
+<div class="lista">
+
+<div class="musica" data-name="Quem Nos Separará">
+<div class="nome">Quem Nos Separará</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+<div class="musica" data-name="Senhor Quem Entrará">
+<div class="nome">Senhor, Quem Entrará?</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- DIVERSOS -->
+
+<section class="tema">
+
+<h2>Diversos</h2>
+
+<div class="lista">
+
+<div class="musica" data-name="Restauração">
+<div class="nome">Restauração</div>
+<div class="links">
+<a class="letra" href="#">Letra</a>
+<a class="cifra" href="#">Cifra</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+XIX EAC Cidade Nova • Livro de Cantos Digital
+</footer>
+
+<script>
+
+const busca=document.getElementById("busca");
+
+busca.addEventListener("input",()=>{
+
+const termo=busca.value.toLowerCase();
+
+document.querySelectorAll(".musica").forEach(item=>{
+
+const nome=item.dataset.name.toLowerCase();
+
+item.style.display=nome.includes(termo)?"flex":"none";
+
+});
+
+});
+
+</script>
+
+</body>
 </html>
