@@ -13,7 +13,6 @@
 
 =========================================================
 */
-
 const musicas = [
 
     /*
@@ -197,27 +196,21 @@ const musicas = [
 
         musicas: [
             {
-                nome: "Abraço de Pai",
-                letra: "#",
+                nome: "Abraço de Pai - Walmir Alencar",
+                letra: "https://www.letras.mus.br/walmir-alencar/68921/",
                 cifra: "https://www.cifraclub.com.br/walmir-alencar/abraco-de-pai/"
             },
 
             {
-                nome: "Confia Em Mim",
-                letra: "#",
+                nome: "Confia Em Mim - Músicas Católicas",
+                letra: "https://www.letras.mus.br/vida-reluz/103698/",
                 cifra: "https://www.cifraclub.com.br/catolicas/confia-em-mim/"
             },
 
             {
-                nome: "Filho Eu Amo Você",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/jaco-medeiros/filho-eu-amo-voce/"
-            },
-
-            {
-                nome: "Ninguém Explica Deus",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/isadora-pompeo/ninguem-explica-deus/"
+                nome: "Ninguém Explica Deus - Preto no Branco",
+                letra: "https://www.letras.mus.br/preto-no-branco/ninguem-explica-deus/",
+                cifra: "https://www.cifraclub.com.br/preto-no-branco/ninguem-explica-deus/"
             },
 
             {
@@ -227,38 +220,32 @@ const musicas = [
             },
 
             {
-                nome: "Reflexo",
-                letra: "#",
-                cifra: "#"
+                nome: "Reflexo - Toca de Assis",
+                letra: "https://www.letras.mus.br/toca-de-assis/1354889/",
+                cifra: "https://www.cifraclub.com.br/toca-de-assis/reflexo/"
             },
 
             {
-                nome: "Sonda-me, Usa-me",
-                letra: "#",
-                cifra: "https://www.cifraclub.com.br/aline-barros/sonda-me-usa-me/"
+                nome: "Teus Planos - Juninho Cassimiro",
+                letra: "https://www.letras.mus.br/juninho-cassimiro/teus-planos/",
+                cifra: "https://www.cifraclub.com.br/juninho-cassimiro/teus-planos/"
             },
 
             {
-                nome: "Teus Planos",
-                letra: "#",
-                cifra: "#"
+                nome: "Terra Seca - Fraternidade São João Paulo II",
+                letra: "https://www.letras.mus.br/fraternidade-sao-joao-paulo-ii/terra-seca/",
+                cifra: "https://www.cifraclub.com.br/fraternidade-sao-joao-paulo-ii/terra-seca/"
             },
 
             {
-                nome: "Terra Seca",
-                letra: "#",
-                cifra: "#"
-            },
-
-            {
-                nome: "Tudo Posso",
-                letra: "#",
+                nome: "Tudo Posso - Celina Borges",
+                letra: "https://www.letras.mus.br/celina-borges/144998/",
                 cifra: "https://www.cifraclub.com.br/celina-borges/tudo-posso/"
             },
          
             {
-                nome: "Verdades do Tempo",
-                letra: "#",
+                nome: "Verdades do Tempo - Thiago Brado",
+                letra: "https://www.letras.mus.br/thiago-brado/verdades-do-tempo/",
                 cifra: "https://www.cifraclub.com.br/thiago-brado/verdades-do-tempo/"
             },
         ]
