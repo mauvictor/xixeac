@@ -117,6 +117,32 @@ const musicas = [
 
     /*
     =====================================================
+    JOSÉ
+    =====================================================
+    */
+
+    {
+        tema: "José",
+        id: "jose",
+        icone: "🪵",
+
+        musicas: [
+            {
+                nome: "Fã de São José - Laércio Oliveira",
+                letra: "https://www.letras.mus.br/laercio-oliveira/278759/",
+                cifra: "https://www.cifraclub.com.br/laercio-oliveira/fa-de-sao-jose/"
+            },
+
+            {
+                nome: "Simplesmente José - Eugênio Jorge",
+                letra: "https://www.letras.mus.br/eugenio-jorge/simplesmente-jose/",
+                cifra: "https://www.cifraclub.com.br/eugenio-jorge/simplesmente-jose/"
+            },
+       ]
+    },
+ 
+    /*
+    =====================================================
     LOUVOR E ADORAÇÃO
     =====================================================
     */
