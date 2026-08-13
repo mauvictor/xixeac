@@ -583,66 +583,109 @@ document.addEventListener(
 // Cifra Club — abertura inteligente no Android
 // ============================================================
 //
-// Quando um link do Cifra Club possui "keyShape", significa
-// que a cifra está sendo aberta com uma configuração de tom.
+// Quando uma cifra do Cifra Club possui "keyShape" na URL,
+// significa que existe uma configuração específica para a cifra.
 //
-// No Android, o aplicativo Cifra Club pode não preservar essa
-// configuração. Por isso, oferecemos ao usuário a opção de
-// abrir no aplicativo ou no navegador.
+// O aplicativo Android pode não preservar essa configuração.
+// Por isso, no Android, oferecemos ao usuário a opção de:
+//
+//   📱 Abrir no aplicativo
+//   🌐 Abrir no navegador
 //
 // No computador e em outros dispositivos, o comportamento
-// original dos links é mantido.
+// original do link é mantido.
+//
+// IMPORTANTE:
+// Não tentamos converter keyShape em tom, pois o valor de
+// keyShape não deve ser interpretado como uma escala fixa
+// de C, C#, D etc.
 // ============================================================
+
 
 document.addEventListener("click", function (event) {
 
-    const link = event.target.closest('a[href*="cifraclub.com.br"]');
+    // Procura o link do Cifra Club que foi clicado.
+    //
+    // closest() também funciona se o usuário clicar em um
+    // elemento dentro do <a>, como um ícone ou <span>.
+    const link = event.target.closest(
+        'a[href*="cifraclub.com.br"]'
+    );
 
-    // Não é um link do Cifra Club
+    // Não é um link do Cifra Club.
     if (!link) return;
 
-    // Só interfere no Android
-    const isAndroid = /Android/i.test(navigator.userAgent);
 
+    // --------------------------------------------------------
+    // Detecta Android
+    // --------------------------------------------------------
+
+    const isAndroid = /Android/i.test(
+        navigator.userAgent
+    );
+
+    // Em computador, iPhone etc., mantém o comportamento
+    // original do link.
     if (!isAndroid) return;
+
+
+    // --------------------------------------------------------
+    // Lê a URL
+    // --------------------------------------------------------
 
     let url;
 
     try {
+
         url = new URL(link.href);
+
     } catch (erro) {
+
+        // URL inválida: não interfere no link.
         return;
+
     }
 
+
     // --------------------------------------------------------
-    // Só precisamos intervir quando existe keyShape.
+    // Verifica se existe keyShape
+    // --------------------------------------------------------
     //
-    // Exemplo:
+    // Só mostramos o aviso quando a URL possui keyShape.
+    //
+    // Exemplos:
+    //
+    // ?keyShape=8
+    //
     // ?capo=0&keyShape=8
     //
-    // Um link sem keyShape será aberto normalmente.
+    // Um link simples, sem keyShape, continua abrindo
+    // normalmente.
     // --------------------------------------------------------
 
     if (!url.searchParams.has("keyShape")) {
         return;
     }
 
+
+    // Impede o Android de abrir imediatamente o aplicativo.
     event.preventDefault();
 
-    // Obtém o valor do keyShape
-    const keyShape = url.searchParams.get("keyShape");
 
-    mostrarModalCifra(url.href, keyShape);
+    // Mostra nossa escolha personalizada.
+    mostrarModalCifra(url.href);
+
 });
 
 
 // ============================================================
-// Modal
+// Cria o modal
 // ============================================================
 
-function mostrarModalCifra(url, keyShape) {
+function mostrarModalCifra(url) {
 
-    // Evita duplicar o modal
+    // Se por algum motivo já existir um modal,
+    // remove antes de criar outro.
     const modalExistente =
         document.getElementById("modal-cifra-club");
 
@@ -650,18 +693,17 @@ function mostrarModalCifra(url, keyShape) {
         modalExistente.remove();
     }
 
-    // Tenta identificar o tom
-    const tom = obterTomCifraClub(keyShape);
-
-    const descricaoTom = tom
-        ? `Esta cifra está configurada para o tom <strong>${tom}</strong>.`
-        : "Esta cifra está configurada para um tom específico.";
+    // --------------------------------------------------------
+    // Cria o elemento do modal
+    // --------------------------------------------------------
 
     const modal = document.createElement("div");
 
     modal.id = "modal-cifra-club";
 
+
     modal.innerHTML = `
+
         <div class="modal-cifra-overlay">
 
             <div
@@ -680,16 +722,19 @@ function mostrarModalCifra(url, keyShape) {
 
                 <div class="modal-cifra-texto">
 
-                    ${descricaoTom}
+                    Esta cifra possui uma configuração
+                    específica de tom.
 
                     <br><br>
 
-                    No aplicativo Cifra Club, essa configuração
-                    pode não ser preservada.
+                    No aplicativo Cifra Club, essa
+                    configuração pode não ser preservada.
 
                     <br><br>
 
-                    <strong>Como deseja abrir?</strong>
+                    <strong>
+                        Como deseja abrir?
+                    </strong>
 
                 </div>
 
@@ -724,46 +769,66 @@ function mostrarModalCifra(url, keyShape) {
             </div>
 
         </div>
+
     `;
 
+    // Adiciona o modal à página.
     document.body.appendChild(modal);
 
-
     // ========================================================
-    // Abrir no navegador
+    // BOTÃO: Abrir no navegador
     // ========================================================
 
     document
         .getElementById("cifra-navegador")
         .addEventListener("click", function () {
 
+            // Remove o modal.
             modal.remove();
 
-            // Mantém a URL completa, inclusive:
-            // ?capo=0&keyShape=8
+            // Abre a URL original no navegador.
+            //
+            // IMPORTANTE:
+            // keyShape e capo permanecem na URL.
+            //
+            // Exemplo:
+            //
+            // https://www.cifraclub.com.br/...
+            //     ?capo=0&keyShape=8
+            //
+            // Assim o site do Cifra Club pode aplicar
+            // corretamente a configuração da cifra.
+
             window.open(url, "_blank");
 
         });
 
-
     // ========================================================
-    // Abrir no aplicativo
+    // BOTÃO: Abrir no aplicativo
     // ========================================================
 
     document
         .getElementById("cifra-app")
         .addEventListener("click", function () {
 
+            // Remove o modal.
             modal.remove();
 
-            // Deixa o Android decidir como abrir a URL.
+            // Entrega a URL ao Android.
+            //
+            // Se o Cifra Club estiver associado à URL,
+            // o Android poderá abrir o aplicativo.
+            //
+            // O aplicativo poderá não preservar keyShape,
+            // que é justamente o motivo de termos mostrado
+            // o aviso ao usuário.
+
             window.location.href = url;
 
         });
 
-
     // ========================================================
-    // Cancelar
+    // BOTÃO: Cancelar
     // ========================================================
 
     document
@@ -776,7 +841,7 @@ function mostrarModalCifra(url, keyShape) {
 
 
     // ========================================================
-    // Clicar fora do modal fecha
+    // Clicar fora do modal = cancelar
     // ========================================================
 
     modal
@@ -789,72 +854,44 @@ function mostrarModalCifra(url, keyShape) {
 
         });
 
+    // ========================================================
+    // ESC = cancelar
+    // ========================================================
 
-    // ========================================================
-    // ESC fecha o modal
-    // ========================================================
+    function fecharComEsc(event) {
+
+        if (event.key === "Escape") {
+
+            modal.remove();
+
+            document.removeEventListener(
+                "keydown",
+                fecharComEsc
+            );
+        }
+    }
 
     document.addEventListener(
         "keydown",
-        function fecharComEsc(event) {
-
-            if (event.key === "Escape") {
-
-                if (document.getElementById("modal-cifra-club")) {
-                    modal.remove();
-                }
-
-                document.removeEventListener(
-                    "keydown",
-                    fecharComEsc
-                );
-            }
-
-        }
+        fecharComEsc
     );
 
+    // ========================================================
+    // Coloca o foco no botão Navegador
+    // ========================================================
+    //
+    // É o caminho que preserva a configuração da cifra,
+    // então ele recebe o foco inicialmente.
 
-    // Coloca o foco no botão principal
     document
         .getElementById("cifra-navegador")
         .focus();
+
 }
 
-
 // ============================================================
-// Converte keyShape do Cifra Club em nome do tom
+// Fim — Cifra Club
 // ============================================================
-//
-// ATENÇÃO:
-// O keyShape é um identificador interno de posição/transposição
-// utilizado pelo Cifra Club. A tabela abaixo permite apresentar
-// uma indicação amigável ao usuário.
-//
-// Se você encontrar algum keyShape diferente no seu projeto,
-// podemos acrescentá-lo aqui.
-// ============================================================
-
-function obterTomCifraClub(keyShape) {
-
-    const tons = {
-
-        "0": "C",
-        "1": "C#",
-        "2": "D",
-        "3": "D#",
-        "4": "E",
-        "5": "F",
-        "6": "F#",
-        "7": "G",
-        "8": "G#",
-        "9": "A",
-        "10": "A#",
-        "11": "B"
-
-    };
-
-    return tons[keyShape] || null;
-}
 
 /* ======================================================
    INICIALIZAÇÃO
