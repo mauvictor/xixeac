@@ -1109,3 +1109,153 @@ body.dark footer strong {
     }
 
 }
+
+/* ============================================================
+   Modal Cifra Club
+   ============================================================ */
+
+.modal-cifra-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 99999;
+}
+
+
+/* Caixa principal */
+
+.modal-cifra {
+    width: min(420px, 100%);
+
+    padding: 24px;
+
+    border-radius: 18px;
+
+    background: var(--card-bg, #ffffff);
+    color: var(--text-color, #222222);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+
+    animation: modalCifraEntrada 0.18s ease-out;
+}
+
+
+/* Título */
+
+.modal-cifra-titulo {
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+
+/* Texto */
+
+.modal-cifra-texto {
+    font-size: 0.98rem;
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+}
+
+
+/* Botões */
+
+.modal-cifra-botoes {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.modal-cifra-btn {
+    flex: 1;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 10px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+.modal-cifra-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+/* Navegador */
+
+.modal-cifra-btn.principal {
+    background: #198754;
+    color: #ffffff;
+}
+
+
+/* Aplicativo */
+
+.modal-cifra-btn.secundario {
+    background: #6c757d;
+    color: #ffffff;
+}
+
+
+/* Cancelar */
+
+.modal-cifra-cancelar {
+    margin-top: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    opacity: 0.7;
+
+    cursor: pointer;
+
+    font-size: 0.9rem;
+}
+
+
+.modal-cifra-cancelar:hover {
+    opacity: 1;
+}
+
+
+/* Animação */
+
+@keyframes modalCifraEntrada {
+
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
