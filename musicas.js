@@ -124,7 +124,7 @@ const musicas = [
     {
         tema: "José",
         id: "jose",
-        icone: "🪵",
+        icone: "👨‍👦",
 
         musicas: [
             {
