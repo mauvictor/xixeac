@@ -42,7 +42,7 @@ const musicas = [
             {
                 nome: "O Céu Se Abre - Walmir Alencar",
                 letra: "https://www.letras.mus.br/walmir-alencar/1100285/",
-                cifra: "https://www.cifraclub.com.br/ministerio-adoracao-vida/o-ceu-se-abre/"
+                cifra: "https://www.cifraclub.com.br/ministerio-adoracao-vida/o-ceu-se-abre/?keyShape=5"
             },
 
             {
@@ -92,7 +92,7 @@ const musicas = [
             {
                 nome: "Colo de Mãe - Frei Gilson",
                 letra: "https://www.letras.mus.br/frei-gilson/colo-de-mae/",
-                cifra: "https://www.cifraclub.com.br/frei-gilson/colo-de-mae/"
+                cifra: "https://www.cifraclub.com.br/frei-gilson/colo-de-mae/?keyShape=3"
             },
 
             {
@@ -109,7 +109,7 @@ const musicas = [
 
             {
                 nome: "Vem Pro Colo da Mãe - Músicas Católicas",
-                letra: "#",
+                letra: "https://musicasdeigreja.com.br/letra/vem-pro-colo-da-mae",
                 cifra: "https://www.cifraclub.com.br/catolicas/vem-pro-colo-da-mae/"
             }
         ]
@@ -154,7 +154,7 @@ const musicas = [
             {
                 nome: "Não Vou Parar de te adorar - Colo de Deus",
                 letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/nao-vou-parar/",
-                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/nao-vou-parar/"
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/nao-vou-parar/?capo=0&keyShape=8"
             },
 
             {
@@ -210,7 +210,7 @@ const musicas = [
             {
                 nome: "Ninguém Explica Deus - Preto no Branco",
                 letra: "https://www.letras.mus.br/preto-no-branco/ninguem-explica-deus/",
-                cifra: "https://www.cifraclub.com.br/preto-no-branco/ninguem-explica-deus/"
+                cifra: "https://www.cifraclub.com.br/preto-no-branco/ninguem-explica-deus/?keyShape=7"
             },
 
             {
@@ -240,7 +240,7 @@ const musicas = [
             {
                 nome: "Verdades do Tempo - Thiago Brado",
                 letra: "https://www.letras.mus.br/thiago-brado/verdades-do-tempo/",
-                cifra: "https://www.cifraclub.com.br/thiago-brado/verdades-do-tempo/"
+                cifra: "https://www.cifraclub.com.br/thiago-brado/verdades-do-tempo/?keyShape=3"
             },
         ]
     },
@@ -332,7 +332,7 @@ const musicas = [
             {
                 nome: "Você Vai Chegar - Ramon e Rafael",
                 letra: "https://www.letras.mus.br/ramon-e-rafael/voce-vai-chegar/",
-                cifra: "https://www.cifraclub.com.br/ramon-e-rafael/voce-vai-chegar/"
+                cifra: "https://www.cifraclub.com.br/ramon-e-rafael/voce-vai-chegar/?keyShape=5"
             }
         ]
     }
