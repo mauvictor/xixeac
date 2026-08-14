@@ -137,7 +137,7 @@ const musicas = [
                 nome: "Simplesmente José - Eugênio Jorge",
                 letra: "https://www.letras.mus.br/eugenio-jorge/simplesmente-jose/",
                 cifra: "https://www.cifraclub.com.br/eugenio-jorge/simplesmente-jose/"
-            },
+            }
        ]
     },
  
