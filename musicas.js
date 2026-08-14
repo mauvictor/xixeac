@@ -164,7 +164,19 @@ const musicas = [
                 letra: "https://www.letras.mus.br/celina-borges/219395/",
                 cifra: "https://www.cifraclub.com.br/celina-borges/busque-alto/"
             },
-
+         
+            {
+                nome: "Casa - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/casa/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/casa/"
+            },
+         
+            {
+                nome: "Desperta o Santo Dentro de Mim - Arthur Endy",
+                letra: "https://www.letras.mus.br/arthur-endy/desperta-o-santo-dentro-de-mim/",
+                cifra: "https://www.cifraclub.com.br/arthur-endy/desperta-o-santo-dentro-de-mim/"
+            }, 
+         
             {
                 nome: "Diante do Rei - Vida Reluz",
                 letra: "https://www.letras.mus.br/vida-reluz/77581/",
@@ -178,15 +190,27 @@ const musicas = [
             },
          
             {
-                nome: "Não Vou Parar de te adorar - Colo de Deus",
-                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/nao-vou-parar/",
-                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/nao-vou-parar/?capo=0&keyShape=8"
+                nome: "É Tudo Sobre Você - Morada",
+                letra: "https://www.letras.mus.br/ministerio-morada/e-tudo-sobre-voce/",
+                cifra: "https://www.cifraclub.com.br/ministerio-morada/e-tudo-sobre-voce/"
             },
 
             {
-                nome: "Pescador de Cristo - Músicas Católicas",
-                letra: "https://www.letras.mus.br/catolicas/pescador-de-cristo/",
-                cifra: "https://www.cifraclub.com.br/catolicas/pescador-de-cristo/"
+                nome: "Minha Essência - Thiago Brado",
+                letra: "https://www.letras.mus.br/thiago-brado/minha-essencia/",
+                cifra: "https://www.cifraclub.com.br/thiago-brado/minha-essencia/"
+            },
+
+            {
+                nome: "Mística Sublime - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/mistica-sublime/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/mistica-sublime/"
+            },  
+         
+            {
+                nome: "Não Vou Parar de te adorar - Colo de Deus",
+                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/nao-vou-parar/",
+                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/nao-vou-parar/?capo=0&keyShape=8"
             },
 
             {
@@ -234,11 +258,23 @@ const musicas = [
             },
 
             {
+                nome: "Nas Asas do Senhor - Celina Borges",
+                letra: "https://www.letras.mus.br/celina-borges/1573986/",
+                cifra: "https://www.cifraclub.com.br/celina-borges/nas-asas-do-senhor/"
+            },
+         
+            {
                 nome: "Ninguém Explica Deus - Preto no Branco",
                 letra: "https://www.letras.mus.br/preto-no-branco/ninguem-explica-deus/",
                 cifra: "https://www.cifraclub.com.br/preto-no-branco/ninguem-explica-deus/?keyShape=7"
             },
-
+         
+            {
+                nome: "Raridade - Anderson Freire",
+                letra: "https://www.letras.mus.br/anderson-freire/raridade/",
+                cifra: "https://www.cifraclub.com.br/anderson-freire/raridade/"
+            },
+         
             {
                 nome: "Reflexo - Toca de Assis",
                 letra: "https://www.letras.mus.br/toca-de-assis/1354889/",
@@ -258,6 +294,12 @@ const musicas = [
             },
 
             {
+                nome: "Tua Família - Anjos de Resgate",
+                letra: "https://www.letras.mus.br/anjos-de-resgate-musicas/167357/",
+                cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/tua-familia/"
+            },
+         
+            {
                 nome: "Tudo Posso - Celina Borges",
                 letra: "https://www.letras.mus.br/celina-borges/144998/",
                 cifra: "https://www.cifraclub.com.br/celina-borges/tudo-posso/"
@@ -268,6 +310,13 @@ const musicas = [
                 letra: "https://www.letras.mus.br/thiago-brado/verdades-do-tempo/",
                 cifra: "https://www.cifraclub.com.br/thiago-brado/verdades-do-tempo/?keyShape=3"
             },
+         
+            {
+                nome: "Você Vai Chegar - Ramon e Rafael",
+                letra: "https://www.letras.mus.br/ramon-e-rafael/voce-vai-chegar/",
+                cifra: "https://www.cifraclub.com.br/ramon-e-rafael/voce-vai-chegar/?keyShape=5"
+            }     
+
         ]
     },
 
@@ -288,42 +337,6 @@ const musicas = [
                 letra: "https://www.letras.mus.br/anjos-de-resgate-musicas/291759/#album:-que-amigos-ao-vivo",
                 cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/amigos-pela-fe/"
             },
-         
-            {
-                nome: "Casa - Colo de Deus",
-                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/casa/",
-                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/casa/"
-            },
-         
-            {
-                nome: "Desperta o Santo Dentro de Mim - Arthur Endy",
-                letra: "https://www.letras.mus.br/arthur-endy/desperta-o-santo-dentro-de-mim/",
-                cifra: "https://www.cifraclub.com.br/arthur-endy/desperta-o-santo-dentro-de-mim/"
-            },
-
-            {
-                nome: "É Tudo Sobre Você - Morada",
-                letra: "https://www.letras.mus.br/ministerio-morada/e-tudo-sobre-voce/",
-                cifra: "https://www.cifraclub.com.br/ministerio-morada/e-tudo-sobre-voce/"
-            },
-
-            {
-                nome: "Minha Essência - Thiago Brado",
-                letra: "https://www.letras.mus.br/thiago-brado/minha-essencia/",
-                cifra: "https://www.cifraclub.com.br/thiago-brado/minha-essencia/"
-            },
-
-            {
-                nome: "Mística Sublime - Colo de Deus",
-                letra: "https://www.letras.mus.br/comunidade-catolica-colo-de-deus/mistica-sublime/",
-                cifra: "https://www.cifraclub.com.br/comunidade-catolica-colo-de-deus/mistica-sublime/"
-            },
-         
-            {
-                nome: "Nas Asas do Senhor - Celina Borges",
-                letra: "https://www.letras.mus.br/celina-borges/1573986/",
-                cifra: "https://www.cifraclub.com.br/celina-borges/nas-asas-do-senhor/"
-            },
 
             {
                 nome: "Peregrino do Amor - Anjos de Resgate",
@@ -332,15 +345,15 @@ const musicas = [
             },
 
             {
+                nome: "Pescador de Cristo - Músicas Católicas",
+                letra: "https://www.letras.mus.br/catolicas/pescador-de-cristo/",
+                cifra: "https://www.cifraclub.com.br/catolicas/pescador-de-cristo/"
+            },
+         
+            {
                 nome: "Primavera - Kennia",
                 letra: "https://www.letras.mus.br/kennia/504136/",
                 cifra: "https://www.cifraclub.com.br/kennia/primavera/"
-            },
-
-            {
-                nome: "Raridade - Anderson Freire",
-                letra: "https://www.letras.mus.br/anderson-freire/raridade/",
-                cifra: "https://www.cifraclub.com.br/anderson-freire/raridade/"
             },
 
             {
@@ -349,17 +362,6 @@ const musicas = [
                 cifra: "https://www.cifraclub.com.br/banda-dom/seu-amor-demais/"
             },
 
-            {
-                nome: "Tua Família - Anjos de Resgate",
-                letra: "https://www.letras.mus.br/anjos-de-resgate-musicas/167357/",
-                cifra: "https://www.cifraclub.com.br/anjos-de-resgate-musicas/tua-familia/"
-            },
-
-            {
-                nome: "Você Vai Chegar - Ramon e Rafael",
-                letra: "https://www.letras.mus.br/ramon-e-rafael/voce-vai-chegar/",
-                cifra: "https://www.cifraclub.com.br/ramon-e-rafael/voce-vai-chegar/?keyShape=5"
-            }
         ]
     }
 ];
