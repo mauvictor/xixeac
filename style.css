@@ -822,22 +822,17 @@ body.dark .numero {
 /* BOTÃO LETRA */
 
 .letra {
-
-    color: var(--azul);
-
-    background: var(--azul-muito-claro);
-
+    color: #8A681F;
+    background: #F8E8B8;
+    border: 1px solid #E2C66F;
 }
 
 
 /* BOTÃO CIFRA */
 
 .cifra {
-
     color: white;
-
     background: var(--azul);
-
 }
 
 
@@ -846,31 +841,22 @@ body.dark .numero {
 ====================================================== */
 
 body.dark .letra {
-
-    color: #DCEAF3;
-
-    background: var(--azul-muito-claro);
-
+    color: #F5D77A;
+    background: #3A321F;
+    border: 1px solid #6F5A27;
 }
 
-
 body.dark .cifra {
-
     color: #FFFFFF;
-
     background: var(--azul);
-
 }
 
 
 /* Efeito ao passar o mouse */
 
 .links a:hover {
-
     transform: translateY(-1px);
-
     opacity: .85;
-
 }
 
 /* ======================================================
