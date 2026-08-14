@@ -172,12 +172,6 @@ const musicas = [
             },
          
             {
-                nome: "Desperta o Santo Dentro de Mim - Arthur Endy",
-                letra: "https://www.letras.mus.br/arthur-endy/desperta-o-santo-dentro-de-mim/",
-                cifra: "https://www.cifraclub.com.br/arthur-endy/desperta-o-santo-dentro-de-mim/"
-            }, 
-         
-            {
                 nome: "Diante do Rei - Vida Reluz",
                 letra: "https://www.letras.mus.br/vida-reluz/77581/",
                 cifra: "https://www.cifraclub.com.br/vida-reluz/diante-do-rei/"
@@ -257,6 +251,12 @@ const musicas = [
                 cifra: "https://www.cifraclub.com.br/catolicas/confia-em-mim/"
             },
 
+            {
+                nome: "Desperta o Santo Dentro de Mim - Arthur Endy",
+                letra: "https://www.letras.mus.br/arthur-endy/desperta-o-santo-dentro-de-mim/",
+                cifra: "https://www.cifraclub.com.br/arthur-endy/desperta-o-santo-dentro-de-mim/"
+            }, 
+         
             {
                 nome: "Nas Asas do Senhor - Celina Borges",
                 letra: "https://www.letras.mus.br/celina-borges/1573986/",
